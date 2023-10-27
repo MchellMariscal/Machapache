@@ -1,5 +1,5 @@
-bin/cow : src/cow.cpp include/*
-	c++ src/cow.cpp -o bin/cow -lcurses -I include
+bin/cow : src/spaceinvaders.cpp include/*
+	c++ src/spaceinvaders.cpp -o bin/spaceinvaders -lcurses -I include
 
-run : bin/cow
-	./bin/cow
+run : bin/spaceinvaders
+	./bin/spaceinvaders
