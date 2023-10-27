@@ -16,13 +16,13 @@ protected:
 public:
     Dibujo(int x, int y, std::string recurso)
     {
-        archivo.open("./Data/" + recurso + ".txt");
+        archivo.open("./data/" + recurso + ".txt");
         this->x = x;
         this->y = y;
     }
     Dibujo(std::string recurso)
     {
-        archivo.open("./Data/" + recurso + ".txt");
+        archivo.open("./data/" + recurso + ".txt");
         this->x = 0;
         this->y = 0;
     }

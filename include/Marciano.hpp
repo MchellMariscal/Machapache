@@ -6,10 +6,10 @@ class Marciano : public Dibujo, public Actualizable
 {
 private:
 public:
-    Marciano() : Dibujo("NaveBichotaExtraterrestre")
+    Marciano() : Dibujo("AlienMalaCopa")
     {
     }
-    Marciano(int x, int y) : Dibujo(x, y, "NaveBichotaExtraterrestre")
+    Marciano(int x, int y) : Dibujo(x, y, "AlienMalaCopa")
     {
     }
     void DesplazarIzq(){

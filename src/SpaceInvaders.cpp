@@ -3,12 +3,14 @@
 #include <Marciano.hpp>
 #include <list>
 #include <curses.h>
+#include <Escenario.hpp>
 
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
     Ventana ventana;
+    Escenario *escena1 = new Escenario(10, 45);
     Marciano *marciano1 = new Marciano(0, 0);
     Marciano *marciano2 = new Marciano(100, 0);
     Marciano *marciano3 = new Marciano(50, 50);
@@ -32,14 +34,15 @@ int main(int argc, char const *argv[])
         }
         if (key == 'a' || key == KEY_LEFT)
         {
-            vaca1->DesplazarIzq();
+            marciano1->DesplazarIzq();
         } 
         if (key == 'd' || key == KEY_RIGHT)
         {
-            vaca1->DesplazarDer();
+            marciano1->DesplazarDer();
         } 
         ventana.Actualizar(actualizables);
         ventana.Dibujar(dibujos);
+      
     }
 
     return 0;
