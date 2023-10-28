@@ -1,0 +1,47 @@
+@startuml
+class SpaceInvaders
+class Invasor
+class Alienigena
+class Planeta 
+class ProteccionExtraterrestre 
+class FuegoAlienigena
+class Pluton 
+class Urano
+class Neptuno 
+class Saturno
+class Jupiter
+class Marte 
+class Tierra 
+class Venus 
+class Mercurio
+class Marc 
+class Marciano
+class NavelasDivinas
+class Proyectil
+class Humano
+class AlienBichota
+class AlienBunasVibras
+class AlienDiva
+class AlienMalaCopa
+class NaveBichotaExtraterrestre
+SpaceInvaders -- Planeta
+Invasor <|-- Alienigena
+Alienigena --|> Calamar
+Alienigena --|> Cangrejo
+Alienigena --|> Pulpo
+Alienigena --o  FuegoAlienigena
+Planeta <|-- Pluton
+Planeta <|-- Urano
+Planeta <|-- Neptuno
+Planeta <|-- Saturno
+Planeta <|-- Jupiter
+Planeta <|-- Marte
+Planeta <|-- Tierra
+Planeta <|-- Venus
+Planeta <|-- Mercurio
+Humano --o Nave
+Alienigena --o Nave
+Humano --o Cañon
+Humano --o ProteccionExtraterrestre
+Invasor --o Planeta
+Tierra --* Humano
