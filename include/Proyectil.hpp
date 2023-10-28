@@ -7,7 +7,7 @@ class Proyectil : public Dibujo, public Actualizable
 private:
     int direccion;
 public:
-    Proyectil(int x, int y) : Dibujo(x, y, "NaveLasDivinas") {
+    Proyectil(int x, int y) : Dibujo(x, y, "bala") {
         this->direccion =1;
     } 
     ~Proyectil() {} 

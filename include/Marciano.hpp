@@ -12,7 +12,7 @@ public:
      {
 
      }
-     Marciano(int x, int y) :Dibujo(x,y, "AlienMalaCop"){
+     Marciano(int x, int y) :Dibujo(x,y, "AlienMalaCopa"){
 
      }
      void Actualizar()  //(MUEVE Al dibujo)

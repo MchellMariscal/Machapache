@@ -2,17 +2,17 @@
 #include<Dibujo.hpp>
 #include<Actualizable.hpp>
 
-class NavelasDivinas : public Dibujo, public Actualizable
+class Marc : public Dibujo, public Actualizable
 
 {
 private:
     /* data */
 public:
-    NavelasDivinas () : Dibujo("NaveLasDivinas")
+    Marc () : Dibujo("AlienBichota")
      {
 
      }
-     NavelasDivinas(int x, int y) :Dibujo(x,y, "NaveLasDivinas"){
+     Marc(int x, int y) :Dibujo(x,y, "AlienBichota"){
 
      }
      void Actualizar()  //(MUEVE Al dibujo)
@@ -25,5 +25,5 @@ public:
     void DesplazarDerecha(){
         this ->x +=1;
     }
-    ~NavelasDivinas () {}
+    ~Marc () {}
 };
