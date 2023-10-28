@@ -55,7 +55,7 @@ int main(int argc, char const *argv[])
             // salir de juego
             break;
         }
-        if (key == 'a' || key == KEY_LEFT)
+        if (key == 'd' || key == KEY_LEFT)
         {
             navelasdivinas->DesplazarIzquierda();
         }
