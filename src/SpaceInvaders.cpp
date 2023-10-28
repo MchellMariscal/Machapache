@@ -4,46 +4,60 @@
 #include <list>
 #include <curses.h>
 #include <Escenario.hpp>
+#include <Arma.hpp>
+
 
 using namespace std;
 
 int main(int argc, char const *argv[])
 {
     Ventana ventana;
-    Escenario *escena1 = new Escenario(10, 45);
-    Marciano *marciano1 = new Marciano(0, 0);
-    Marciano *marciano2 = new Marciano(100, 0);
-    Marciano *marciano3 = new Marciano(50, 50);
+    Marciano  *marciano1= new Marciano(100,21)
+    Escenario *escena1 = new Escenario(50,50);
+    Arma *Bala=new Arma(100,20)
+ 
 
     list<Dibujo *> dibujos;
-    dibujos.push_back(marciano1 );
-    dibujos.push_back(marciano2 );
-    dibujos.push_back(marciano3 );
+    dibujos.push_back(escena1 );
+    
 
     list<Actualizable *> actualizables;
-    actualizables.push_back(marciano1 );
-    actualizables.push_back(marciano2 );
-    actualizables.push_back(marciano3 );
+    actualizables.push_back(escena1 );
    
-    while (true)
+   
+    while (true)  //descomentar solo si vcamos a meter dibujos q se muebvan
     {
-        int key = getch();
-        if (key == 'q' || key == 'Q')
+       int key = getch();
+        if (key == 'q' || key== 'Q')
         {
-            break;
-        }
-        if (key == 'a' || key == KEY_LEFT)
-        {
-            marciano1->DesplazarIzq();
-        } 
-        if (key == 'd' || key == KEY_RIGHT)
-        {
-            marciano1->DesplazarDer();
-        } 
+            //salir de juego
+             break;
+         }
+         if (key == 'd' ||key==KEY_LEFT){
+             monkey1->DesplazarIzquierda();
+         }
+         if (key== 'd'||key== KEY_RIGHT){
+             monkey1->DesplazarDerecha();
+         } 
+         
+    //     if ( key== KEY_UP){
+    //        marciano1->DesplazarArriba();
+    //         }
+    //     if ( key==KEY_DOWN){
+    //         marciano1->DesplazarAbajo();
+    //     }
+       
+         
+             if (key=='p')
+         {
+             bala->CambiarDireccion();
+         }        
+      
+
+        
+        refresh();
         ventana.Actualizar(actualizables);
         ventana.Dibujar(dibujos);
-      
     }
-
-    return 0;
+    
 }

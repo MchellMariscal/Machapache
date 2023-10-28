@@ -2,26 +2,28 @@
 #include<Dibujo.hpp>
 #include<Actualizable.hpp>
 
-class Marciano : public Dibujo, public Actualizable 
+class Marciano : public Dibujo, public Actualizable
+
 {
 private:
+    /* data */
 public:
-    Marciano() : Dibujo("AlienMalaCopa")
+    Marciano () : Dibujo("AlienMalaCopa")
+     {
+
+     }
+     Marciano(int x, int y) :Dibujo(x,y, "AlienMalaCop"){
+
+     }
+     void Actualizar()  //(MUEVE Al dibujo)
     {
+    //      this->x +=1;
+     }
+    void DesplazarIzquierda(){
+        this->x -= 1;
     }
-    Marciano(int x, int y) : Dibujo(x, y, "AlienMalaCopa")
-    {
+    void DesplazarDerecha(){
+        this ->x +=1;
     }
-    void DesplazarIzq(){
-        this->x += -1;
-    }
-    void DesplazarDer(){
-        this->x += 1;
-    }
-    void Actualizar(){
-        this->x +=0;
-        this->y +=0;
-    }
-  
-    ~Marciano() {}
+    ~Marciano () {}
 };
