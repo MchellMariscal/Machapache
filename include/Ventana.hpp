@@ -1,7 +1,7 @@
-#include<curses.h>
-#include<unistd.h>
-#include<list>
-#include<Actualizable.hpp>
+#include <curses.h>
+#include <unistd.h>
+#include <list>
+#include <Actualizable.hpp>
 
 using namespace std;
 class Ventana
@@ -9,7 +9,8 @@ class Ventana
 private:
     /* data */
 public:
-    Ventana(/* args */) {
+    Ventana(/* args */)
+    {
         initscr();
         noecho();
         curs_set(FALSE);
@@ -17,28 +18,30 @@ public:
         keypad(stdscr, TRUE);
         timeout(10);
     }
-    void Actualizar(list<Actualizable*> actualizables){
+    void Actualizar(list<Actualizable *> actualizables)
+    {
         for (auto &&actualizable : actualizables)
         {
             actualizable->Actualizar();
         }
         usleep(41000);
     }
-    void Dibujar(list<Dibujo*> dibujos)
+    void Dibujar(list<Dibujo *> dibujos)
     {
         clear();
         for (auto &&dibujo : dibujos)
         {
             dibujo->Dibujar();
         }
-        //se dibuja vaca
+        // se dibuja vaca
 
         box(stdscr, '|', '-');
-    refresh();
+        refresh();
     }
 
-    ~Ventana() {
-        keypad(stdscr,FALSE);
+    ~Ventana()
+    {
+        keypad(stdscr, FALSE);
         endwin();
     }
 };

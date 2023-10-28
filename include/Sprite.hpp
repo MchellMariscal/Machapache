@@ -1,22 +1,25 @@
 #pragma once
-#include<list>
-#include<Dibujo.hpp>
+#include <list>
+#include <Dibujo.hpp>
 using namespace std;
 
 class Sprite : public Dibujo
 {
 private:
-int cuadroActual=0;
-    list<Dibujo*> cuadros;
+    int cuadroActual = 0;
+    list<Dibujo *> cuadros;
+
 public:
-    Sprite(list<Dibujo*> cuadros) {
-        this->cuadros=cuadros;
+    Sprite(list<Dibujo *> cuadros)
+    {
+        this->cuadros = cuadros;
     }
-    void Dibujar(){
+    void Dibujar()
+    {
         this->cuadros[cuadroActual].Dibujar();
     }
-    void AvanzarCuadro(){
-
+    void AvanzarCuadro()
+    {
     }
     ~Sprite() {}
 };

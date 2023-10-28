@@ -4,5 +4,5 @@ class Actualizable
 private:
     /* data */
 public:
-   virtual void Actualizar() = 0;
+    virtual void Actualizar() = 0;
 };
