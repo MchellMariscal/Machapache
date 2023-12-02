@@ -1,9 +1,11 @@
-# SpaceInvaders
+# Space Invaders
 **Hecho por:**
 
 *La hermana bichota :Nestor Omar Morales Martinez 223100271*
 
-*Valeria Michell Flores Mariscal 22310179*
+*Mapache Esquizofrenico:Valeria Michell Flores Mariscal 22310179*
+
+*Cancion recomendada de Spotify: El Sillon-Alfredo Olivas *
 
 *Este repositorio muestra una codificacion sencilla del juego Space Invaders.*
 
