@@ -1,17 +1,29 @@
-CXX = x86_64-w64-mingw32-g++
-br: clean compilar ejecutar
+# Directorios de origen y destino
+SRC_DIR := src
+BIN_DIR := bin
 
-compilar: src/SpaceInvaders.cpp
-	$(CXX) src/SpaceInvaders.cpp -o bin/SpaceInvaders -I include
+SFML := -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lchipmunk
 
-ejecutar: bin/SpaceInvaders
-	./bin/SpaceInvaders
+# Obtener todos los archivos .cpp en el directorio de origen
+CPP_FILES := $(wildcard $(SRC_DIR)/*.cpp)
 
-clean: bin/SpaceInvaders
-	rm bin/SpaceInvaders
+# Generar los nombres de los archivos .exe en el directorio de destino
+EXE_FILES := $(patsubst $(SRC_DIR)/%.cpp,$(BIN_DIR)/%.exe,$(CPP_FILES))
 
-bin/SpaceInvaders : src/SpaceInvaders.cpp include/*
-	c++ src/SpaceInvaders.cpp -o bin/SpaceInvaders -lcurses -I include
+# Regla para compilar cada archivo .cpp y generar el archivo .exe correspondiente
+$(BIN_DIR)/%.exe: $(SRC_DIR)/%.cpp
+	g++ $< -o $@ $(SFML) -Iinclude
 
-run : bin/SpaceInvaders
-	./bin/SpaceInvaders
+# Regla por defecto para compilar todos los archivos .cpp
+all: $(EXE_FILES)
+
+# Regla para ejecutar cada archivo .exe
+run%: $(BIN_DIR)/%.exe
+	./$<
+
+# Regla para limpiar los archivos generados
+clean:
+	rm -f $(EXE_FILES)
+
+.PHONY: all clean
+.PHONY: run-%
