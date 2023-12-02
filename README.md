@@ -1,5 +1,5 @@
 # Space Invaders
-**Echo por:**
+**Hecho por:**
 
 *Nestor Omar Morales Martinez 223100271*
 
