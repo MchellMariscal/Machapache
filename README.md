@@ -1,4 +1,9 @@
 # Space Invaders
+**Echo por:**
+
+*Nestor Omar Morales Martinez 223100271*
+
+*Valeria Michell Flores Mariscal 22310179*
 
 *Este repositorio muestra una codificacion sencilla del juego Space Invaders.*
 
