@@ -1,7 +1,7 @@
 # SpaceInvaders
-**Echo por:**
+**Hecho por:**
 
-*Nestor Omar Morales Martinez 223100271*
+*La hermana bichota :Nestor Omar Morales Martinez 223100271*
 
 *Valeria Michell Flores Mariscal 22310179*
 
