@@ -3,7 +3,7 @@
 int main()
 {
     // Crear una ventana
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Image");
+    sf::RenderWindow window(sf::VideoMode(480, 720), "Space Background");
 
     // Cargar la imagen desde un archivo
     sf::Texture texture;
