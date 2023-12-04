@@ -40,15 +40,7 @@ int main()
         {
             player.move(velocidad, 0);
         }
-        // if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-        // {
-        //     pika.move(0, velocidad * -1);
-        // }
-        // if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-        // {
-        //     pika.move(0, velocidad);
-        // }
-
+        
         // Actualizar animacion pikachu
         // pika.update();
         // player.update();
