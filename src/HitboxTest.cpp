@@ -11,8 +11,7 @@ public:
 
         // Cargar la imagen desde un archivo
         
-        if (!texture.loadFromFile("assets/Images/pikachu.png"))
-        {
+        if (!texture.loadFromFile("assets/Images/TestSources/pikachu.png")){
         
         }
         this->sprite = sf::Sprite(texture);
@@ -60,6 +59,10 @@ int main()
     sf::RenderWindow window(sf::VideoMode(800, 600), "Hitbox Test");
 
     Personaje pika(sf::Vector2f(400, 300), sf::Color::Red);
+    Personaje player(sf::Vector2f(450, 550), sf::Color::Green);
+    Personaje enemy1(sf::Vector2f(550, 50), sf::Color::White);
+    Personaje enemy2(sf::Vector2f(450, 50), sf::Color::White);
+    Personaje enemy3(sf::Vector2f(350, 50), sf::Color::White);
 
     while (window.isOpen())
     {
@@ -74,11 +77,11 @@ int main()
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         {
-            pika.move(velocidad * -1, 0);
+            player.move(velocidad * -1, 0);
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
         {
-            pika.move(velocidad, 0);
+            player.move(velocidad, 0);
         }
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
         {
@@ -91,9 +94,17 @@ int main()
 
         // Actualizar animacion pikachu
         pika.update();
+        player.update();
+        enemy1.update();
+        enemy2.update();
+        enemy3.update();
 
         window.clear();
         pika.draw(window);
+        player.draw(window);
+        enemy1.draw(window);
+        enemy2.draw(window);
+        enemy3.draw(window);
         window.display();
     }
 
