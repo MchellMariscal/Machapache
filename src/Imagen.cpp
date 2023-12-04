@@ -3,11 +3,17 @@
 int main()
 {
     // Crear una ventana
-    sf::RenderWindow window(sf::VideoMode(480, 720), "Space Background");
+    sf::RenderWindow window(sf::VideoMode(800, 800), "Title Screen");
 
     // Cargar la imagen desde un archivo
     sf::Texture texture;
-    if (!texture.loadFromFile("./assets/Images/Sprites/background.png"))
+    if (!texture.loadFromFile("./assets/Images/SpaceBackground.png"))
+    {
+        // Manejar el error si no se puede cargar la imagen
+        return -1;
+    }
+    sf::Texture texture2;
+    if (!texture2.loadFromFile("./assets/Images/Title.png"))
     {
         // Manejar el error si no se puede cargar la imagen
         return -1;
@@ -15,6 +21,7 @@ int main()
 
     // Crear un sprite y asignarle la textura
     sf::Sprite sprite(texture);
+    sf::Sprite sprite2(texture2);
 
     // Bucle principal
     while (window.isOpen())
@@ -35,6 +42,7 @@ int main()
 
         // Dibujar el sprite en la ventana
         window.draw(sprite);
+        window.draw(sprite2);
 
         // Mostrar la ventana
         window.display();
