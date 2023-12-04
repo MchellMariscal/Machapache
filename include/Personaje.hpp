@@ -2,15 +2,10 @@
 class Personaje
 {
 public:
-    Personaje(sf::Vector2f position, sf::Color color, std::string name)
+    Personaje(sf::Vector2f position, sf::Color color)
     {
-        shape.setSize(sf::Vector2f(50, 50));
-        shape.setPosition(position); // Posición inicial cuadro
-        shape.setFillColor(color);
-
         // Cargar la imagen desde un archivo
-        
-        if (!texture.loadFromFile("assets/Images/spritesheet.png")){
+        if (!texture.loadFromFile("assets/Images/TestSources/pikachu.png")){
         
         }
         this->sprite = sf::Sprite(texture);
@@ -30,7 +25,7 @@ public:
     }
 
     void update(){
-        // Actualizar el frame de la animación
+       // Actualizar el frame de la animación
         if (clock.getElapsedTime().asSeconds() >= frameTime)
         {
             currentFrame = (currentFrame + 1) % numFrames;
