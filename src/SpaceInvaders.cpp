@@ -12,7 +12,7 @@ int main()
 {
     sf::RenderWindow window(sf::VideoMode(800, 600), "Hitbox Test");
 
-    Nave spaceship(sf::Vector2f(10, 10), sf::Color::Red);
+    Nave ship(sf::Vector2f(10, 10), sf::Color::Red);
     Jugador player(sf::Vector2f(350, 525), sf::Color::Green);
     Alien1 enemy1(sf::Vector2f(150, 100), sf::Color::White);
     Alien1 enemy2(sf::Vector2f(350, 100), sf::Color::White);
@@ -38,7 +38,7 @@ int main()
                 window.close();
             }
         }
-        spaceship.move(0.1, 0);
+        ship.move(0.1, 0);
 
         if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
         {
@@ -50,7 +50,10 @@ int main()
         }
 
         // Actualizar animacion pikachu
-        spaceship.update();
+        barrier1.update();
+        barrier2.update();
+        barrier3.update();
+        ship.update();
         player.update();
         enemy1.update();
         enemy2.update();
@@ -62,12 +65,9 @@ int main()
         enemy8.update();
         enemy9.update();
         enemy10.update();
-        barrier1.update();
-        barrier2.update();
-        barrier3.update();
 
         window.clear();
-        spaceship.draw(window);
+        ship.draw(window);
         player.draw(window);
         enemy1.draw(window);
         enemy2.draw(window);
